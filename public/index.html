@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venta de autos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Venta de autos</h1>
+    <nav>
+      <button data-section="addCar" class="active">Añadir/Actualizar Auto</button>
+      <button data-section="listCars">Lista Autos</button>
+      <button data-section="findCar">Buscar Auto</button>
+      <button data-section="deleteCar">Eliminar Auto</button>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="addCar" class="active">
+      <h2>Añadir/Actualizar auto</h2>
+      <form id="carForm">
+        <input type="text" id="id" placeholder="ID" required />
+        <input type="text" id="brand" placeholder="Brand" required />
+        <input type="text" id="model" placeholder="Model" required />
+        <input type="number" id="year" placeholder="Year" required />
+        <input type="number" id="price" placeholder="Price" required />
+        <button type="submit">Añadir/Actualizar Auto</button>
+      </form>
+    </section>
+    
+    <section id="listCars">
+      <h2>Listado autos</h2>
+      <ul id="carList"></ul>
+    </section>
+    
+    <section id="findCar">
+      <h2>Buscar auto por ID</h2>
+      <form id="findCarForm">
+        <input type="text" id="findId" placeholder="Car ID" required />
+        <button type="submit">Buscar Auto</button>
+      </form>
+      <div id="foundCarDetails" style="margin-top: 1rem;"></div>
+    </section>
+
+    <section id="deleteCar">
+      <h2>Eliminar auto</h2>
+      <form id="deleteCarForm">
+        <input type="text" id="deleteId" placeholder="Car ID" required />
+        <button type="submit">Eliminar Auto</button>
+      </form>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
